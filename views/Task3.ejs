@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Task 3
+    </title>
+
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="keywords" />
+
+    <!-- //Meta-Tags -->
+
+    <!-- css files -->
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- css files -->
+
+    <!-- Online-fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+    <!-- //Online-fonts -->
+  </head>
+  <body>
+    <!-- Main Content -->
+    <div class="main">
+      <div class="main-mml">
+        <h1 class="logo-mm">Task 3</h1>
+        <div class="mm-main">
+          <a href="/"><input type="submit" value="Go To Task 1"/></a>
+          <a href="/task2"><input type="submit" value="Go To Task 2"/></a>
+        </div>
+        <div class="mm-main">
+          <h2><span>Create Status</span></h2>
+          <form action="/status/create" method="post">
+            <input
+              placeholder="Phone Number"
+              name="phoneNumber"
+              type="text"
+              required=""
+            />
+            <input
+              placeholder="auth-token"
+              name="authToken"
+              type="text"
+              required=""
+            />
+            <input placeholder="status" name="status" type="text" required="" />
+
+            <input type="submit" value="Create Status" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
