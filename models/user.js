@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
     maxlength: [15, "too_long"],
     validate: {
       validator: function(phone_num) {
-        return /[0 - 9]\d{1,15}$/.test(phone_num);
+        return /^\+?[1-9]\d{1,14}$/.test(phone_num);
       },
       message: " Not a valid PhoneNumber "
     },
@@ -38,6 +38,15 @@ const userSchema = new mongoose.Schema({
   birthDate: {
     type: Date,
     max: [Date.now, "in the future"],
+    // validate: {
+    //   validator: function(date) {
+    //     console.log(date);
+    //     return /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])T00:00:00.000Z$/.test(
+    //       date
+    //     );
+    //   },
+    //   message: " Not a valid Date Format "
+    // },
     required: [true, "blank"]
   },
   email: {
